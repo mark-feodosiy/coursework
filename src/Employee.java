@@ -6,13 +6,18 @@ public class Employee {
     private final String middleName;
     private final String lastName;
     private int dept;
-    private int id;
+    private final int id;
     private int salary;
+    private static int idCounter = 1;
 
-    public Employee (String firstName,  String middleName, String lastName) {
+    public Employee (String firstName,  String middleName, String lastName, int dept, int salary) {
+        this.id = idCounter++;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
+        this.dept = dept;
+        this.salary = salary;
+
     }
 
     @Override
@@ -55,4 +60,5 @@ public class Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
 }
