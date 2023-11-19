@@ -22,16 +22,15 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+        return "Employee id = " + '\'' + id +'\'' +
+                ", firstName='" + firstName + '\'' +
                 ", middleName='" + middleName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", dept=" + dept +
+
+                ", salary=" + salary +
                 '}';
     }
-    public void printAllEmployees() {
-        for (int i = 0; i < size; i++) {
-            Contact contact = contacts[i];
-            System.out.println(contact.getNick() + ": " + contact.getPhone());
 
     public String getFirstName() {
         return firstName;
