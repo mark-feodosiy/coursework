@@ -24,6 +24,9 @@ public class Main {
         System.out.println();
         maxSalary();
         System.out.println(maxSalary());
+        System.out.println();
+        averageSalary();
+        System.out.println(averageSalary());
     }
 
     private static void printAllEmployees() {
@@ -56,5 +59,14 @@ public class Main {
             }
         }
         return max;
+    }
+    private static int averageSalary() {
+        int avrg = 0;
+        int i =0;
+        for (int j = 0; j < employees.length; j++) {
+            i++;
+            avrg = avrg + employees [j].getSalary() ;
+        }
+        return avrg / i;
     }
 }
