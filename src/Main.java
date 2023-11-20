@@ -6,8 +6,8 @@ public class Main {
     public static void main(String[] args) {
         employees[0] = new Employee("name1", "patronymic1", "surname1", 1, 1000);
         employees[1] = new Employee("name2", "patronymic2", "surname2", 1, 2000);
-        employees[2] = new Employee("name3", "patronymic3", "surname3", 2, 1500);
-        employees[3] = new Employee("name4", "patronymic4", "surname4", 2, 1800);
+        employees[2] = new Employee("name3", "patronymic3", "surname3", 2, 8150);
+        employees[3] = new Employee("name4", "patronymic4", "surname4", 2, 800);
         employees[4] = new Employee("name5", "patronymic5", "surname5", 3, 2500);
         employees[5] = new Employee("name6", "patronymic6", "surname6", 3, 1200);
         employees[6] = new Employee("name7", "patronymic7", "surname7", 4, 2100);
@@ -16,7 +16,14 @@ public class Main {
         employees[9] = new Employee("name10", "patronymic10", "surname10", 5, 3200);
         printAllEmployees();
         System.out.println();
-        totalSalary(sum.getSalsry);
+        totalSalary();
+        System.out.println(totalSalary());
+        System.out.println();
+        minSalary();
+        System.out.println(minSalary());
+        System.out.println();
+        maxSalary();
+        System.out.println(maxSalary());
     }
 
     private static void printAllEmployees() {
@@ -31,5 +38,23 @@ public class Main {
             sum = sum + employee.getSalary();
         }
         return sum;
+    }
+    private static Employee minSalary() {
+        Employee min = employees [0];
+        for (int i = 0; i < employees.length; i++) {
+            if (employees [i].getSalary() < min.getSalary()) {
+            min = employees [i];
+            }
+        }
+        return min;
+    }
+    private static Employee maxSalary() {
+        Employee max = employees [0];
+        for (int i = 0; i < employees.length; i++) {
+            if (employees [i].getSalary() > max.getSalary()) {
+                max = employees [i];
+            }
+        }
+        return max;
     }
 }
