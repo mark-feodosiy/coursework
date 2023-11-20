@@ -27,6 +27,8 @@ public class Main {
         System.out.println();
         averageSalary();
         System.out.println(averageSalary());
+        System.out.println();
+        printSpn();
     }
 
     private static void printAllEmployees() {
@@ -68,5 +70,10 @@ public class Main {
             avrg = avrg + employees [j].getSalary() ;
         }
         return avrg / i;
+    }
+    private static void printSpn() {
+        for (Employee employee : employees) {
+            System.out.println(employee.getLastName() + ' ' + employee.getFirstName() + ' ' + employee.getMiddleName());
+        }
     }
 }
